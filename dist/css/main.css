@@ -187,6 +187,9 @@ header {
   margin-top: 36%;
   line-height: 1.2;
 }
+.invitation .content .couple-names span {
+  font-size: 32px;
+}
 .invitation .content .monogram {
   margin: 10%;
 }
@@ -256,6 +259,9 @@ header {
 @media (max-width: 500px) {
   .invitation .content .couple-names {
     font-size: 8.4vw;
+  }
+  .invitation .content .couple-names span {
+    font-size: 6.4vw;
   }
   .invitation .content .monogram img {
     width: 6.4vw;
