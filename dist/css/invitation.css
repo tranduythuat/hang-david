@@ -23,15 +23,27 @@ body {
   aspect-ratio: 500/891;
   background: url("../../assets/images/open.png") no-repeat center/cover;
   display: flex;
-  justify-content: center;
-  align-items: end;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  color: #78563c;
 }
-.container .content p {
+.container .content p.title {
   font-family: "SVN-GothamLight", sans-serif;
   font-weight: 600;
-  margin-bottom: 19%;
   text-decoration: none;
-  color: #78563c;
+}
+.container .content p.subtext {
+  font-family: "SVN-GothamLight", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 19%;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 2.52vw;
+  }
 }
 
 /*# sourceMappingURL=invitation.css.map */

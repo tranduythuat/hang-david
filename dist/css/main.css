@@ -179,7 +179,7 @@ header {
   width: 100%;
   aspect-ratio: 500/1184;
   font-weight: 300;
-  background: url("../../assets/images/top_bg.png") no-repeat top/contain, url("../../assets/images/bottom_bg.png") no-repeat bottom/contain;
+  background: url("../../assets/images/top_bg.png") no-repeat top/contain, url("../../assets/images/bottom02.png") no-repeat bottom/contain;
 }
 .invitation .content .couple-names {
   font-family: "UVNKeChuyen3", sans-serif;
@@ -195,7 +195,7 @@ header {
   height: auto;
 }
 .invitation .content .divider {
-  margin: 7% 0 6%;
+  margin: 7% 0 5%;
 }
 .invitation .content .divider img {
   width: 8px;
@@ -281,7 +281,7 @@ header {
   width: 100%;
   font-weight: 300;
   line-height: 1.2;
-  padding: 10% 10%;
+  padding: 5% 10%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -306,6 +306,9 @@ header {
   font-family: "SVN-GothamLight", sans-serif;
   font-size: 11.38px;
   letter-spacing: 1px;
+}
+.rsvp .content .info-notice p strong {
+  font-weight: 600;
 }
 .rsvp .content hr {
   border-top: 2px solid #b1803e;
@@ -410,6 +413,7 @@ header {
     font-size: 8.4vw;
   }
   .rsvp .content .info-notice p {
+    font-size: 2.276vw;
     letter-spacing: 0.2vw;
   }
   .rsvp .content form .form-group input[type=text],

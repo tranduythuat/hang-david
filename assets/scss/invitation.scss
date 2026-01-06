@@ -24,14 +24,27 @@ body {
         aspect-ratio: 500 / 891;
         background: url('../../assets/images/open.png') no-repeat center / cover;
         display: flex;
-        justify-content: center;
-        align-items: end;
-        p {
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        color: #78563cff;
+        p.title {
             font-family: $gothamLight-font;
             font-weight: 600;
-            margin-bottom: 19%;
             text-decoration: none;
-            color: #78563cff;
         }
+        p.subtext {
+            font-family: $gothamLight-font;
+            text-transform: uppercase;
+            margin-bottom: 19%;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    body {
+        font-size: calc(($font-size-base / 500px) * 100vw);
     }
 }
