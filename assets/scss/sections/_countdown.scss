@@ -1,0 +1,29 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.countdown {
+    .content {
+        width: 100%;
+        background: url('../../assets/images/countdown_bg.png') no-repeat center / cover;
+        font-family: $gotham-font;
+        h2.title {
+            font-family: $gothamLight-font;
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+        }
+
+        .divider {
+            img {
+                width: 20%;
+                height: auto;
+            }
+        }
+    }
+}

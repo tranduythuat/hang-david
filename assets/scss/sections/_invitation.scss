@@ -1,0 +1,112 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invitation {
+    .content {
+        font-family: $gotham-font;
+        width: 100%;
+        aspect-ratio: 500 / 1184;
+        font-weight: 300;
+        background: url('../../assets/images/top_bg.png') no-repeat top / contain, 
+                    url('../../assets/images/bottom_bg.png') no-repeat bottom / contain;
+        .couple-names {
+            font-family: $uvnKeChuyen3-font;
+            font-size: 42px;
+            margin-top: 36%;
+            line-height: 1.2;
+        }
+        .monogram {
+            margin: 10%;
+            img {
+                width: 32px;
+                height: auto;
+            }
+        }
+        .divider {
+            margin: 7% 0 6%;
+            img {
+                width: 8px;
+                height: auto;
+            }
+        }
+        .invitation-text {
+            text-transform: uppercase;
+            font-family: $gothamLight-font;
+        }
+        .date {
+            font-family: $gotham-font;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 1%;
+        }
+        .time-location {
+            font-family: $gothamLight-font;
+            line-height: 1.2;
+            span {
+                font-family: $gothamBold-font;
+            }
+        }
+        .venue-name {
+            font-family: $uvnKeChuyen3-font;
+            font-size: 34px;
+        }
+        .venue-address {
+            font-family: $gothamLight-font;
+            font-style: italic;
+            margin-top: 1%
+        }
+
+        .map-box {
+            @include flex-center;
+            margin-top: 2%;
+            .maps-btn {
+                display: block;
+                @include flex-center;
+                width: 50%;
+                padding: 1%;
+                background: #e8c998ff;
+                color: #78563cff;
+                border: none;
+                border-radius: 15px;
+                font-weight: 600;
+                font-size: 12px;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: background 0.3s ease;
+                text-decoration: none;
+                font-family: $gotham-font;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .couple-names {
+                font-size: calc((42 / 500) * 100vw);
+            }
+            .monogram {
+                img {
+                    width: calc((32 / 500) * 100vw);
+                }
+            }
+            .divider {
+                img {
+                    width: calc((8 / 500) * 100vw);
+                }
+            }
+            .date {
+                font-size: calc((25 / 500) * 100vw);
+            }
+            .venue-name {
+                font-size: calc((34 / 500) * 100vw);
+            }
+
+            .map-box {
+                .maps-btn {
+                    font-size: calc((12 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

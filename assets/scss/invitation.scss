@@ -1,0 +1,37 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $font-size-base;
+    @include flex-center;
+}
+
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    .content {
+        cursor: pointer;
+        box-shadow: $shadow-default;
+        width: 100%;
+        aspect-ratio: 500 / 891;
+        background: url('../../assets/images/open.png') no-repeat center / cover;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        p {
+            font-family: $gothamLight-font;
+            font-weight: 600;
+            margin-bottom: 19%;
+            text-decoration: none;
+            color: #78563cff;
+        }
+    }
+}

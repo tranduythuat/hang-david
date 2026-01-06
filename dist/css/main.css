@@ -1,0 +1,548 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SVN-Gotham";
+  src: url("../../assets/fonts/SVN-GothamBook.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamBold";
+  src: url("../../assets/fonts/SVN-GothamBold.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamLight";
+  src: url("../../assets/fonts/SVN-Gotham Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamBlack";
+  src: url("../../assets/fonts/SVN-Gotham Black.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVNHeavenly";
+  src: url("../../assets/fonts/SVN-Heavenly.woff2") format("woff2"), url("../../assets/fonts/SVN-Heavenly.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVNHeavenly";
+  src: url("../../assets/fonts/SVN-Heavenly.woff2") format("woff2"), url("../../assets/fonts/SVN-Heavenly.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UVNKeChuyen3";
+  src: url("../../assets/fonts/UVNKeChuyen3.woff2") format("woff2"), url("../../assets/fonts/UVNKeChuyen3.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12.6px;
+  font-family: "SVN-Gotham", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background-color: #e8e6d9;
+  color: #b1803e;
+  background: url("../../assets/images/background.png") no-repeat center/cover;
+}
+
+/* music */
+.player {
+  position: fixed;
+  bottom: 10px;
+  right: 1%;
+  max-width: 55px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 9999;
+  border: 1px solid var(--text-title-color);
+}
+
+.player #iconSvg {
+  width: 100%;
+  height: 100%;
+  fill: var(--text-title-color);
+}
+
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+/* Định nghĩa hoạt ảnh xoay */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 2.52vw;
+  }
+  .player {
+    max-width: 11vw;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #b1803e;
+  color: white;
+  padding: 1rem;
+}
+
+.image-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+.image-wrapper img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.animate-flip {
+  transform-origin: left center;
+  transform: rotateY(-120deg) scale(0.9);
+  opacity: 0;
+  filter: brightness(0.6);
+  backface-visibility: hidden;
+  transition: none;
+}
+
+.animate-flip.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  border-radius: 12px;
+}
+
+.red {
+  background: #e74c3c;
+}
+
+.blue {
+  background: #3498db;
+}
+
+.green {
+  background: #2ecc71;
+}
+
+.invitation .content {
+  font-family: "SVN-Gotham", sans-serif;
+  width: 100%;
+  aspect-ratio: 500/1184;
+  font-weight: 300;
+  background: url("../../assets/images/top_bg.png") no-repeat top/contain, url("../../assets/images/bottom_bg.png") no-repeat bottom/contain;
+}
+.invitation .content .couple-names {
+  font-family: "UVNKeChuyen3", sans-serif;
+  font-size: 42px;
+  margin-top: 36%;
+  line-height: 1.2;
+}
+.invitation .content .monogram {
+  margin: 10%;
+}
+.invitation .content .monogram img {
+  width: 32px;
+  height: auto;
+}
+.invitation .content .divider {
+  margin: 7% 0 6%;
+}
+.invitation .content .divider img {
+  width: 8px;
+  height: auto;
+}
+.invitation .content .invitation-text {
+  text-transform: uppercase;
+  font-family: "SVN-GothamLight", sans-serif;
+}
+.invitation .content .date {
+  font-family: "SVN-Gotham", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 1%;
+}
+.invitation .content .time-location {
+  font-family: "SVN-GothamLight", sans-serif;
+  line-height: 1.2;
+}
+.invitation .content .time-location span {
+  font-family: "SVN-GothamBold", sans-serif;
+}
+.invitation .content .venue-name {
+  font-family: "UVNKeChuyen3", sans-serif;
+  font-size: 34px;
+}
+.invitation .content .venue-address {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-style: italic;
+  margin-top: 1%;
+}
+.invitation .content .map-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.invitation .content .map-box .maps-btn {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 1%;
+  background: #e8c998;
+  color: #78563c;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  font-family: "SVN-Gotham", sans-serif;
+}
+@media (max-width: 500px) {
+  .invitation .content .couple-names {
+    font-size: 8.4vw;
+  }
+  .invitation .content .monogram img {
+    width: 6.4vw;
+  }
+  .invitation .content .divider img {
+    width: 1.6vw;
+  }
+  .invitation .content .date {
+    font-size: 5vw;
+  }
+  .invitation .content .venue-name {
+    font-size: 6.8vw;
+  }
+  .invitation .content .map-box .maps-btn {
+    font-size: 2.4vw;
+  }
+}
+
+.rsvp {
+  width: 100%;
+}
+.rsvp .content {
+  width: 100%;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 10% 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.rsvp .content .header h1 {
+  font-family: "UVNKeChuyen3", sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+}
+.rsvp .content .divider {
+  margin: 8%;
+}
+.rsvp .content .divider img {
+  width: 8px;
+  height: auto;
+}
+.rsvp .content .info-notice {
+  margin-bottom: 5%;
+}
+.rsvp .content .info-notice p {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 11.38px;
+  letter-spacing: 1px;
+}
+.rsvp .content hr {
+  border-top: 2px solid #b1803e;
+  margin-bottom: 5%;
+}
+.rsvp .content form .form-group {
+  margin-bottom: 5%;
+}
+.rsvp .content form .form-group input[type=text],
+.rsvp .content form .form-group input[type=number],
+.rsvp .content form .form-group textarea {
+  font-family: "SVN-Gotham", sans-serif;
+  width: 100%;
+  padding: 2% 4%;
+  border: 2px solid #b1803e;
+  border-radius: 15px;
+  background: transparent;
+  color: #000;
+  transition: border-color 0.3s ease;
+  font-size: 9.24px;
+}
+.rsvp .content form .form-group input[type=text]:focus,
+.rsvp .content form .form-group input[type=number]:focus,
+.rsvp .content form .form-group textarea:focus {
+  outline: none;
+}
+.rsvp .content form .form-group textarea {
+  aspect-ratio: 500/130;
+  resize: vertical;
+  line-height: 1.5;
+}
+.rsvp .content form .form-group .attendance-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7%;
+  margin: 3% 0 5%;
+}
+.rsvp .content form .form-group .attendance-buttons .radio-wrapper {
+  position: relative;
+}
+.rsvp .content form .form-group .attendance-buttons .radio-wrapper input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.rsvp .content form .form-group .attendance-buttons .radio-label {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 11.38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  border: 2px solid #b1803e;
+  border-radius: 15px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+}
+.rsvp .content form .form-group .attendance-buttons .radio-label:hover {
+  background: #ded1c3;
+}
+.rsvp .content form .form-group .attendance-buttons .radio-label.chinese {
+  font-size: 16px;
+  font-family: "kaiu", sans-serif;
+}
+.rsvp .content form .form-group .attendance-buttons .radio-wrapper input[type=radio]:checked + .radio-label {
+  background: #b1803e;
+  border: 2px solid #b1803e;
+  color: white;
+}
+.rsvp .content form .form-group .dietary-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.rsvp .content form .submit-btn {
+  width: 38%;
+  padding: 2%;
+  background: #b1803e;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 11.38px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+  margin-bottom: 5%;
+  font-family: "SVN-GothamLight", sans-serif;
+}
+.rsvp .content form .submit-btn:hover {
+  background: rgb(77, 66, 23);
+  opacity: 0.9;
+}
+.rsvp .content form .submit-btn:active {
+  transform: scale(0.98);
+}
+@media (max-width: 500px) {
+  .rsvp .content .header h1 {
+    font-size: 8.4vw;
+  }
+  .rsvp .content .info-notice p {
+    letter-spacing: 0.2vw;
+  }
+  .rsvp .content form .form-group input[type=text],
+  .rsvp .content form .form-group input[type=number],
+  .rsvp .content form .form-group textarea {
+    font-size: 1.848vw;
+  }
+  .rsvp .content form .form-group .attendance-buttons .radio-label {
+    font-size: 2.276vw;
+  }
+  .rsvp .content form .submit-btn {
+    font-size: 2.276vw;
+    letter-spacing: 0.2vw;
+  }
+}
+
+.end {
+  width: 100%;
+  aspect-ratio: 500/810;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuan-linh/DSC04187 (1).webp") no-repeat 10% 100%/cover;
+  justify-content: start;
+}
+.end .content {
+  width: 100%;
+  padding: 0 8%;
+  font-family: "1FTVBlushingRose", sans-serif;
+  color: white;
+}
+.end .content p.subtext {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 55%;
+  line-height: 1.2;
+}
+.end .content p.subtext.chinese {
+  font-size: 14px;
+  font-family: "kaiu", sans-serif;
+}
+.end .content p.thanks-text {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 2%;
+}
+.end .content p.thanks-text.chinese {
+  font-family: "kaiu", sans-serif;
+  font-size: 18px;
+}
+@media (max-width: 500px) {
+  .end .content p.subtext {
+    font-size: 2.8vw;
+    letter-spacing: 0.2vw;
+  }
+  .end .content p.subtext.chinese {
+    font-size: 2.8vw;
+  }
+  .end .content p.thanks-text {
+    font-size: 3.2vw;
+    letter-spacing: 0.2vw;
+  }
+  .end .content p.thanks-text.chinese {
+    font-size: 3.6vw;
+  }
+}
+
+.qrcode {
+  width: 100%;
+}
+.qrcode .content {
+  width: 100%;
+  text-align: left;
+  padding: 0 10% 15%;
+  font-family: "1FTVBlushingRose", sans-serif;
+}
+.qrcode .content h2 {
+  font-size: 25px;
+  margin-bottom: 5%;
+  font-weight: 300;
+}
+.qrcode .content .qr-btn {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: 2%;
+  background: #838484;
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+  margin-top: 3%;
+  text-decoration: none;
+}
+
+div:where(.swal2-container) img:where(.swal2-image) {
+  margin: 0 !important;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+.qrcode-box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.qrcode-box .item {
+  width: 100%;
+  margin-bottom: 6%;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.qrcode-box .item .info {
+  margin-bottom: 2%;
+}
+.qrcode-box .item .qrcode-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qrcode-box .item .qrcode-img img {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

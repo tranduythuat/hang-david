@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mỹ Hằng & David Malem</title>
+
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="600" /> 
+    <meta property="og:image:height" content="400" /> 
+  
+    <meta property="og:title" content="Mỹ Hằng & David Malem" />
+    <meta property="og:description" content="26.02.2026" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="dist/css/invitation.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content flip-vertical-left" id="card">
+        <p class="fade-down">SAVE OUR DATE</p>
+      </div>
+    </div>
+    <script src="assets/js/gsap-animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      let card = document.getElementById('card');
+      card.addEventListener('click', () => {
+        window.location.href = "/thiepmoi.html";
+      })
+    </script>
+  </body>
+</html>
