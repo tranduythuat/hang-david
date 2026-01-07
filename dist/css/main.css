@@ -186,9 +186,16 @@ header {
   font-size: 42px;
   margin-top: 36%;
   line-height: 1.2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .invitation .content .couple-names span {
   font-size: 32px;
+  position: absolute;
+  top: 35%;
 }
 .invitation .content .monogram {
   margin: 8%;

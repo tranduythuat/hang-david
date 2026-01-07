@@ -14,8 +14,13 @@
             font-size: 42px;
             margin-top: 36%;
             line-height: 1.2;
+            position: relative;
+            @include flex-center;
+            flex-direction: column;
             span {
                 font-size: 32px;
+                position: absolute;
+                top: 35%;
             }
         }
         .monogram {
