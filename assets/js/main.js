@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const {
       name: name,
       confirm: confirm,
+      guest_number: guest_number,
       vegetarian: vegetarian,
       wish: wish,
     } = data;
@@ -154,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: new URLSearchParams({
           name,
           confirm,
+          guest_number,
           vegetarian,
           wish
         }),
